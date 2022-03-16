@@ -1,8 +1,8 @@
 $(function () {
-    $("").slick({
+    $(".top-slider__inner").slick({
       dots: true,
       arrows: false,
-      autoplay: true,
-      autoplaySped: 1000,
+      // autoplay: true,
+      // autoplaySped: 1000,
     });
 });

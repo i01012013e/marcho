@@ -1,0 +1,109 @@
+.footer {
+    background-color: $bg;
+}
+.footer-top {
+    padding: 70px 0px 40px;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+    }
+    &__item-contact {
+        width: 270px;
+        margin-right: 30px;
+        padding-right: 33px;
+    }
+    &__logo {
+        margin-bottom: 35px;
+    }
+    &__logo-img {
+    }
+    &__address,
+    &__email,
+    &__phone,
+    &__link {
+        margin-bottom: 10px;
+        color: $text;
+    }
+    &__social-list {
+        display: flex;
+        margin-top: 38px;
+    }
+    &__social-item {
+        padding-right: 20px;
+    }
+    &__social-link {
+        & svg {
+            width: 16px;
+            height: 18px;
+            fill: $text;
+        }
+        & svg:hover {
+            fill: $accent;
+        }
+    }
+    &__item-nav {
+        width: 170px;
+        margin-right: 30px;
+    }
+    &__title {
+        margin-bottom: 47px;
+        font-size: 22px;
+        @extend %roboto-700;
+    }
+
+    &__list {
+    }
+    &__item {
+    }
+    &__item-form {
+        max-width: 470px;
+    }
+    &__text {
+        font-size: 16px;
+        color: $text;
+        margin-bottom: 30px;
+        margin-top: -2px;
+        @extend %quicksand-500;
+    }
+    &__form {
+    }
+    &__form-input {
+        max-width: 320px;
+        width: 100%;
+        padding: 16px;
+        border: none;
+        font-size: 16px;
+        color: $text;
+        @extend %quicksand-500;
+        box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    }
+    &__form-btn {
+        padding: 16px 24px 15px;
+        border: none;
+        background-color: $accent;
+        color: #fff;
+        text-transform: uppercase;
+        margin-left: 15px;
+        @extend %roboto-400;
+        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+        cursor: pointer;
+    }
+}
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px 0;
+    color: $text;
+    &__sccept {
+        // display: flex;
+        // align-items: center;
+    }
+    &__accept-img {
+        padding: 0 20px;
+        vertical-align: text-top;
+    }
+}
+
+

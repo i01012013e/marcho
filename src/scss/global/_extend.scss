@@ -1,6 +1,40 @@
+%quicksand-400{
+  font-family: "Quicksand-Regular", sans-serif;
+  font-weight: 400;
+}
+%quicksand-500{
+  font-family: "Quicksand-Medium", sans-serif;
+  font-weight: 500;
+}
 %roboto-400{
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
 }
-
+%roboto-700{
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 700;
+}
+%title{
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: $title;
+}
+%text{
+  font-family: "Quicksand-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: $text;
+}
+%btn{
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: $accent;
+  color: #fff;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
+  text-transform: uppercase;
+}
 
