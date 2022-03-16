@@ -1,0 +1,22 @@
+@import "_reset.scss";
+@import "_font.scss";
+@import "_var.scss";
+@import "_extend.scss";
+
+body {
+    font-size: 16px;
+    line-height: 26px;
+    color: $title;
+    @extend %roboto-400;
+}
+// .wrapper {
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
