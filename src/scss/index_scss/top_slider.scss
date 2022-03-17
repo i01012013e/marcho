@@ -5,7 +5,7 @@
   background-color: $bg;
   padding: 65px 0 40px;
   &__container {
-      min-width: 1520px;
+      max-width: 1520px;
   }
     &__inner {
     }
