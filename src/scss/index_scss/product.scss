@@ -1,0 +1,129 @@
+.product {
+    text-align: center;
+    padding: 105px 0 120px;
+    &__inner {
+    }
+    &__title {
+    }
+    &__text {
+        margin-top: 24px;
+    }
+}
+.product-items {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px 30px;
+    &__card-item--sale {
+        position: relative;
+        &::before {
+            content: 'SALE';
+            @extend %btn;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            padding: 8px 10px;
+            z-index: 1;
+        }
+    }
+    &__card-item {
+        max-width: 370px;
+        &:hover {
+            .product-items__link-box {
+                transform: translateY(0);
+            }
+        }
+    }
+    &__img-box {
+        position: relative;
+        height: 370px;
+        border: 1px solid #ececec;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    &__images {
+        object-fit: cover;
+    }
+    &__link-box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        width: 212px;
+        height: 50px;
+        box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+        border-radius: 22px 22px;
+        background-color: #fff;
+        display: flex;
+        margin: 0 auto;
+        transform: translateY(300%);
+        transition: all 0.5s;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 70px;
+        &:nth-child(2) {
+            width: 72px;
+            position: relative;
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 30px;
+                background-color: #ececec;
+            }
+            &::before {
+                left: 0;
+            }
+            &::after {
+                right: 0;
+            }
+        }
+    }
+    &__link:hover {
+        path {
+            transition: all 0.5s;
+            fill: #fe3e57;
+        }
+    }
+}
+
+.price-box {
+    &__card-star {
+    margin: 0 auto;
+    }
+    &__card-title {
+        @extend %h4;
+        padding-top: 20px;
+    }
+
+    &__current-price {
+        color: $title;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    &__old-price {
+        position: relative;
+        display: inline-block;
+        color: $text;
+        margin-left: 20px;
+        &::before {
+            content: "";
+            border-bottom: $text 1px solid;
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            transform: rotate(7deg);
+        }
+    }
+}
+.product-link {
+    color: $title;
+    display: inline-block;
+    padding: 14px 27px;
+    border: $accent 1px solid;
+    margin-top: 55px;
+}

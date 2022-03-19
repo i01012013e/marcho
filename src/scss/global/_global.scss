@@ -22,4 +22,11 @@ body {
 }
 .title{
     @extend %title;
+    text-align: center;
+}
+.text{
+    @extend %text;
+    max-width: 571px;
+    text-align: center;
+    margin: 0 auto;
 }
