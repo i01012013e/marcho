@@ -1,0 +1,60 @@
+.promo {
+    &__wrapper {
+        background-image: url(../img/images/promo/promo-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 150px 0 160px;
+        text-align: center;
+    }
+    &__inner {
+        max-width: 570px;
+        width: 100%;
+        margin-left: auto;
+    }
+    &__subtitle {
+        @extend %subtitle;
+        color: $accent;
+        font-weight: 700;
+    }
+    &__title {
+        @extend %title;
+        margin-top: 30px;
+    }
+    &__clock-box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+    &__clock-item {
+        width: 120px;
+        height: 120px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & span {
+            @extend %title;
+        }
+        & div {
+            @extend %text;
+        }
+    }
+    &__link {
+        color: #29282d;
+        display: inline-block;
+        padding: 14px 27px;
+        border: #fe3e57 1px solid;
+        margin-top: 55px;
+    }
+}
+.partners {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 113px auto 0px;
+    padding: 0 15px;
+    &__item {
+    }
+}
