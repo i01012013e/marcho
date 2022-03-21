@@ -3,7 +3,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
     }
 }
 .menu {
@@ -15,13 +15,13 @@
     }
     &__list-link {
         color: $title;
-        padding-bottom: 1px;
+        padding-bottom: 3px;
         transition: all 0.3s;
         @extend %roboto-400;
         &:hover {
             color: $accent;
             border-bottom: 1px solid $accent;
-            @extend %roboto-700;
+            font-weight: 700;
         }
     }
     &__list-link--active {
