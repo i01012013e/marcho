@@ -2,12 +2,16 @@
 // -----------------------------------------
 @import 'header_footer/header.scss';
 
-@import 'index_scss/top_slider.scss';
-@import 'index_scss/categories.scss';
-@import 'index_scss/video_fashion.scss';
-@import 'index_scss/product.scss';
-@import 'index_scss/promo.scss';
-@import 'index_scss/blog.scss';
+@import 'login/top.scss';
+@import 'login/modal.scss';
+
+@import 'index/top_slider.scss';
+@import 'index/categories.scss';
+@import 'index/video_fashion.scss';
+@import 'index/product.scss';
+@import 'index/promo.scss';
+@import 'index/blog.scss';
 
 @import 'header_footer/footer.scss';
 // -------------------------------------
+
