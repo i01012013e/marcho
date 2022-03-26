@@ -1,0 +1,40 @@
+.page-404 {
+    padding: 120px 0 120px;
+    &__container{
+      max-width: 1270px;
+      margin: 0 auto;
+      padding: 0 15px 0 15px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 30px;
+    }
+    &__content {
+        max-width: 570px;
+        @extend %text;
+        margin-right: 85px;
+      }
+      &__title {
+        @extend %roboto-700;
+        margin-bottom: 20px;
+        color: #28384f;
+        font-size: 48px;
+    }
+    &__text {
+        max-width: 470px;
+        margin-bottom: 78px;
+        line-height: 26px;
+    }
+    &__link {
+        @extend %btn;
+        width: 180px;
+        padding: 19px 0;
+    }
+    &__img {
+        max-width: 100%;
+    }
+}
+
+
