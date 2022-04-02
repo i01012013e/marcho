@@ -33,3 +33,43 @@ body {
 .header--page-404{
     background-color: $bg;
 }
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    &__prev {
+        &:before{
+            content: url(../img/icon/angle-down.svg);
+            transform: rotate(90deg);
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+    &__arrows {
+        @extend %text;
+    }
+    &__list {
+        display: flex;
+        margin: 0 48px 0 18px;
+    }
+    &__item {
+        margin-left: 30px;
+    }
+    &__link {
+        @extend %text;
+    }
+    &__link--active{
+        color: $accent;
+    }
+    &__next {
+        &:after{
+            content: url(../img/icon/angle-down.svg);
+            transform: rotate(-90deg);
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+}
+
+
+  
