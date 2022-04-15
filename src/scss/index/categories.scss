@@ -1,0 +1,114 @@
+.categories {
+    background-image: url(../img/images/categories/decor-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &__inner {
+        padding: 120px 0;
+    }
+}
+.categories-info {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        max-width: 370px;
+        min-height: 302px;
+        background-color: #fff;
+        padding: 60px 40px 0 40px;
+        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+    }
+    &__title {
+        @extend %h4;
+        margin-top: 35px;
+    }
+    &__text {
+        @extend %text;
+        max-width: 290px;
+        margin-top: 18px;
+        line-height: 26px;
+    }
+}
+.top-categories {
+    margin: 105px auto 60px auto;
+    text-align: center;
+    &__title {
+        @extend %title;
+    }
+    &__text {
+        @extend %text;
+        max-width: 540px;
+        line-height: 26px;
+        display: inline-block;
+        margin: 25px 0 0 0;
+    }
+}
+.categories-items {
+    min-height: 635px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    &__product-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 38px 38px;
+        &:nth-child(1) {
+            grid-row: span 2;
+            p {
+                color: #6600cc;
+            }
+            a:hover {
+                color: #6600cc;
+                border-bottom: 1px solid #6600cc;
+                padding-bottom: 5px;
+            }
+        }
+        &:nth-child(2) {
+            grid-column: span 2;
+            padding-top: 108px;
+            p {
+                color: $accent;
+            }
+            a:hover {
+                color: $accent;
+                border-bottom: 1px solid $accent;
+                padding-bottom: 5px;
+            }
+        }
+        &:nth-child(3) {
+            p {
+                color: #ffcc33;
+            }
+            a:hover {
+                color: #ffcc33;
+                border-bottom: 1px solid #ffcc33;
+                padding-bottom: 5px;
+            }
+        }
+        &:nth-child(4) {
+            p {
+                color: #33ccff;
+            }
+            a:hover {
+                color: #33ccff;
+                border-bottom: 1px solid #33ccff;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    &__subtitle {
+        @extend %subtitle;
+    }
+    &__title {
+        @extend %h4;
+        padding: 10px 0 14px 0;
+    }
+    &__link {
+        display: inline;
+        @extend %roboto-400;
+        font-size: 16px;
+        color: $title;
+        transition: all 0.5s;
+    }
+}

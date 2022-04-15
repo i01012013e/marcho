@@ -5,7 +5,7 @@
 
 body {
     font-size: 16px;
-    line-height: 26px;
+    // line-height: 26px;
     color: $title;
     @extend %roboto-400;
 }
@@ -20,3 +20,56 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+.title{
+    @extend %title;
+    text-align: center;
+}
+.text{
+    @extend %text;
+    max-width: 571px;
+    text-align: center;
+    margin: 0 auto;
+}
+.header--page-404{
+    background-color: $bg;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    &__prev {
+        &:before{
+            content: url(../img/icon/angle-down.svg);
+            transform: rotate(90deg);
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+    &__arrows {
+        @extend %text;
+    }
+    &__list {
+        display: flex;
+        margin: 0 48px 0 18px;
+    }
+    &__item {
+        margin-left: 30px;
+    }
+    &__link {
+        @extend %text;
+    }
+    &__link--active{
+        color: $accent;
+    }
+    &__next {
+        &:after{
+            content: url(../img/icon/angle-down.svg);
+            transform: rotate(-90deg);
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+}
+
+
+  

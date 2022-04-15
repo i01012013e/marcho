@@ -52,3 +52,17 @@ a{
 	text-decoration: none;
 	display: block;
 }
+button{
+	border: none;
+	cursor: pointer;
+}
+input{
+	border: none;
+}
+label{
+	cursor: pointer;
+	user-select: none;
+}
+[placeholder]{
+border:none;
+}

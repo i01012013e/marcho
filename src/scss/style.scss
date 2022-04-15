@@ -1,9 +1,19 @@
 @import 'global/_global.scss';
-
-
-
-
+// -----------------------------------------
 @import 'header_footer/header.scss';
-
-
+// -------------------------------------
+@import 'login_register/top.scss';
+@import 'login_register/modal.scss';
+@import 'page-404/top-404.scss';
+@import 'page-shop/section-shop.scss';
+// -------------------------------------
+@import 'index/top_slider.scss';
+@import 'index/categories.scss';
+@import 'index/video_fashion.scss';
+@import 'index/product.scss';
+@import 'index/promo.scss';
+@import 'index/blog.scss';
+ // -------------------------------------
 @import 'header_footer/footer.scss';
+// -------------------------------------
+

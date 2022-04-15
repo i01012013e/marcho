@@ -1,0 +1,54 @@
+.video-fashion {
+    background-image: url(../img/bg/decor-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: $bg;
+    padding: 125px 0;
+    &__inner {
+        display: flex;
+    }
+    &__popup {
+        max-width: 530px;
+        width: 100%;
+        height: 480px;
+        margin-right: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__content {
+        max-width: 570px;
+        margin-top: 80px;
+    }
+    &__subtitle {
+        @extend %subtitle;
+        font-size: 22px;
+        color: $accent;
+    }
+    &__title {
+        @extend %title;
+        margin: 20px 0 35px 0;
+    }
+    &__text {
+        @extend %text;
+        line-height: 26px;
+    }
+    &__link {
+        @extend %btn;
+        max-width: 160px;
+        display: inline-block;
+        padding: 18px 28px;
+        letter-spacing: 3px;
+        margin-top: 60px;
+    }
+}
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
