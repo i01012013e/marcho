@@ -1,4 +1,28 @@
 $(function () {
+    // -------------------------------------------
+    $(".product-tabs__btn").on("click", function (e) {
+        e.preventDefault();
+        $(".product-tabs__btn").removeClass("product-tabs__btn--active");
+        $(this).addClass("product-tabs__btn--active");
+
+        $(".product-tabs__items-tabs-descript").removeClass("product-tabs__items-tabs-descript--active");
+        $($(this).attr("href")).addClass("product-tabs__items-tabs-descript--active");
+    });
+    // -------------------------------------------
+    $(".product-slide__thumb").slick({
+        asNavFor: ".product-slide__big",
+        focusOnSelect: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        vertical: true,
+        draggable: false,
+    });
+    $(".product-slide__big").slick({
+        asNavFor: ".product-slide__thumb",
+        arrows: false,
+        fade: true,
+    });
+    // -------------------------------------------
     $(".filter-price__input").ionRangeSlider({
         type: "double",
         prefix: "$",
@@ -12,17 +36,17 @@ $(function () {
         },
     });
     // -------------------------------------------
-    $(".select-style").styler({});
+    $(".select-style, .product__item-input").styler({});
     // -------------------------------------------
     $(".shop-content__filter-btn").on("click", function () {
-        $(".shop-content__filter-btn").removeClass('shop-content__filter-btn--active')
-        $(this).addClass('shop-content__filter-btn--active')
+        $(".shop-content__filter-btn").removeClass("shop-content__filter-btn--active");
+        $(this).addClass("shop-content__filter-btn--active");
     });
     $(".button-list").on("click", function () {
-        $(".product-items__card-item, .shop-content__inner").addClass('product-item--list')
+        $(".product-items__card-item, .shop-content__inner").addClass("product-item--list");
     });
     $(".button-grid").on("click", function () {
-        $(".product-items__card-item, .shop-content__inner").removeClass('product-item--list')
+        $(".product-items__card-item, .shop-content__inner").removeClass("product-item--list");
     });
 
     // -------------------------------------------
@@ -35,7 +59,7 @@ $(function () {
     });
     // -------------------------------------------
 
-    $(".price-box__card-star").rateYo({
+    $(".price-box__card-star, .product-tabs__star").rateYo({
         starWidth: "17px",
         normalFill: "#ccccce",
         readOnly: true,

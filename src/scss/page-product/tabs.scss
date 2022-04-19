@@ -1,0 +1,159 @@
+.product-tabs {
+    @extend %text;
+    padding: 100px 0 60px 0;
+    border-bottom: 1px solid $border;
+    &__items-btn {
+        margin-bottom: 42px;
+        border-bottom: 1px solid $border;
+    }
+    &__btn {
+        @extend %roboto-400;
+        color: $text;
+        background: none;
+        margin-right: 60px;
+        padding-bottom: 15px;
+        display: inline-block;
+    }
+    &__btn--active {
+        border-bottom: 1px solid $accent;
+        color: $title;
+    }
+
+    &__items-tabs-descript {
+        display: none;
+        &.product-tabs__items-tabs-descript--active {
+            display: block;
+        }
+    }
+
+    &__item-content {
+        margin-bottom: 40px;
+        display: flex;
+    }
+
+    &__user-avatar-img {
+        min-width: 70px;
+        height: 71px;
+        border-radius: 50%;
+    }
+
+    &__user-content {
+        margin-left: 25px;
+    }
+    &__us-con-top {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    &__user-name {
+        @extend %subtext;
+        font-size: 16px;
+        color: $title;
+        line-height: 18px;
+    }
+
+    &__data {
+        padding-left: 15px;
+        margin-left: 15px;
+        border-left: 1px solid $text;
+    }
+
+    &__star {
+        padding: 0;
+        margin-left: auto;
+    }
+
+    &__user-text {
+        line-height: 26px;
+        margin-bottom: 15px;
+    }
+
+    &__user-link {
+        @extend %text;
+        display: flex;
+        align-items: center;
+        & span {
+            margin-left: 11px;
+        }
+    }
+    .comments-form {
+        &__title {
+            @extend %roboto-400;
+            font-size: 22px;
+            color: $title;
+            padding-bottom: 17px;
+            position: relative;
+            &::after {
+                content: "";
+                width: 60px;
+                height: 2px;
+                background-color: $accent;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        &__star-label {
+            margin: 40px 0 30px 0;
+            display: flex;
+            align-items: center;
+            color: $title;
+            & span {
+                margin-right: 60px;
+            }
+        }
+
+        &__label {
+            & span {
+                @extend %quicksand-400;
+                color: $title;
+                font-size: 16px;
+                margin-right: 25px;
+            }
+        }
+
+        &__imput {
+            @extend %radio-hidden;
+            &:checked + .comments-form__radio{
+                &  svg {
+                    fill: #ffc35b;
+                }
+            }
+        }
+
+        &__radio {
+            & svg {
+                width: 18px;
+                height: 17px;
+                fill: #ccccce;
+
+            }
+        }
+
+        &__input-contacts {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__text {
+            width: 570px;
+            height: 50px;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid $border;
+        }
+
+        &__form-textarea {
+            width: 100%;
+            height: 224px;
+            border: 1px solid $border;
+            padding: 20px;
+        }
+
+        &__btn {
+            @extend %btn;
+            padding: 19px 36px;
+            margin-top: 40px;
+        }
+    }
+}

@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	display: block;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -56,13 +57,10 @@ button{
 	border: none;
 	cursor: pointer;
 }
-input{
-	border: none;
-}
 label{
 	cursor: pointer;
 	user-select: none;
 }
 [placeholder]{
-border:none;
+color: #8d8d8d;
 }

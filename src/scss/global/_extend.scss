@@ -80,7 +80,8 @@
     color: $title;
 }
 // --------------------------------------------------
-%checkbox-hidden {
+%checkbox-hidden,
+%radio-hidden {
     width: 1px;
     height: 1px;
     overflow: hidden;

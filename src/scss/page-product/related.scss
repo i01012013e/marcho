@@ -1,0 +1,56 @@
+.related {
+    padding: 60px 0 120px 0;
+    &__title {
+        text-align: center;
+        @extend %title;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        margin-top: 55px;
+        .product-items {
+            &__card-item {
+                // max-width: 270px;
+            }
+
+            &__card-item--sale {
+            }
+
+            &__img-box {
+                height: auto;
+            }
+
+            &__images {
+            }
+
+            &__link-box {
+                display: none;
+            }
+
+            &__link {
+            }
+
+            &__link--active {
+            }
+        }
+        .price-box {
+            margin-top: 20px;
+            &__card-star {
+            }
+
+            &__card-title {
+                padding-top: 14px;
+            }
+
+            &__current-price {
+                margin-top: 10px;
+            }
+
+            &__old-price {
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+}
