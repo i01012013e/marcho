@@ -1,0 +1,179 @@
+.blog-page {
+    padding: 120px 0 60px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__post-content {
+        width: 770px;
+        margin-right: 30px;
+    }
+
+    &__item {
+        margin-bottom: 60px;
+        &.blog-page__item--no-img {
+            border-top: 1px solid $border;
+            box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
+        }
+    }
+    &__slider {
+        .slick-prev,
+        .slick-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            background-color: $accent;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            box-shadow: 0px 7px 20px 0px rgba(254, 62, 87, 0.3);
+            svg {
+                width: 9px;
+                height: 14px;
+                fill: #fff;
+            }
+        }
+        .slick-prev {
+            left: 40px;
+        }
+        .slick-next {
+            right: 40px;
+        }
+        .slick-disabled {
+            background-color: #fff;
+            box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
+            svg {
+                fill: $accent;
+            }
+        }
+    }
+    &__play {
+        position: relative;
+    }
+    &__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__img {
+        max-width: 770px;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+    }
+    &__item-box {
+        border: 1px solid $border;
+        border-top: none;
+        padding: 40px;
+    }
+
+    &__title {
+        @extend %subtext;
+        font-size: 22px;
+        margin-bottom: 30px;
+        line-height: 30px;
+    }
+    &__link-title {
+        color: $title;
+        transition: 0.3s;
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__text {
+        margin-top: 30px;
+        line-height: 26px;
+    }
+
+    &__aside-right-block {
+        width: 370px;
+        .person {
+            padding: 35px 28px 40px;
+            border: 1px solid #ececec;
+            margin-bottom: 40px;
+            text-align: center;
+            &__img {
+                display: inline-block;
+                width: 160px;
+                height: 160px;
+                object-fit: cover;
+            }
+            &__name {
+                @extend %roboto-700;
+                color: $title;
+                font-size: 18px;
+                margin-top: 35px;
+            }
+            &__position {
+                @extend %quicksand-500;
+                color: $accent;
+                margin-top: 10px;
+            }
+
+            &__text {
+                @extend %text;
+                line-height: 26px;
+                margin-top: 28px;
+            }
+            .footer-top {
+                &__social-list {
+                    justify-content: center;
+                }
+
+                &__social-item {
+                    padding-right: 16px;
+                }
+            }
+        }
+        .latest-post {
+            padding: 35px 28px 40px;
+            border: 1px solid #ececec;
+            margin-bottom: 40px;
+            &__title {
+                @extend %roboto-400;
+                font-size: 22px;
+                color: $title;
+            }
+
+            &__item {
+                margin-top: 20px;
+                padding-top: 16px;
+                & + .latest-post__item{
+                    border-top: 1px solid $border
+                }
+            }
+
+            &__item-link-box {
+                display: flex;
+                align-items: flex-end;
+            }
+        
+            &__img {
+                min-width: 80px;
+                object-fit: cover;
+                margin-right: 16px;
+            }
+
+            &__title {
+                @extend %roboto-400;
+                font-size: 18px;
+                color: $title;
+                line-height: 26px;
+                margin-bottom: 14px;
+            }
+
+            &__text-data {
+                display: inline-block;
+                color: $text;
+            }
+        }
+    }
+}
