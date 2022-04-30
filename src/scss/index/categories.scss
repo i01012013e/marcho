@@ -1,25 +1,41 @@
 .categories {
-    background-image: url(../img/images/categories/decor-bg.png);
+    background-image: url(../img/images/categories/decor.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     &__inner {
         padding: 120px 0;
+        @include max-670 {
+            padding: 60px 0;
+        }
     }
 }
 .categories-info {
     display: flex;
     justify-content: space-between;
-    &__item {
-        max-width: 370px;
-        min-height: 302px;
-        background-color: #fff;
-        padding: 60px 40px 0 40px;
-        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+    @include max-1100 {
+        display: block;
     }
+    &__item {
+        width: 370px;
+        background-color: #fff;
+        padding: 60px 40px 60px 40px;
+        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+        @include max-1100 {
+            width: 100%;
+            padding: 20px 20px;
+        }
+    }
+
     &__title {
         @extend %h4;
         margin-top: 35px;
+        @include max-1100 {
+            margin: 20px 0 10px;
+        }
+        @include max-375 {
+            font-size: 20px;
+        }
     }
     &__text {
         @extend %text;
@@ -33,6 +49,13 @@
     text-align: center;
     &__title {
         @extend %title;
+        @include max-670 {
+            font-size: 44;
+        }
+        @include max-375 {
+            font-size: 38px;
+            line-height: 50px;
+        }
     }
     &__text {
         @extend %text;
@@ -48,11 +71,35 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 30px;
+    @include max-1100 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    @include max-860 {
+        min-height: 0;
+    }
+    @include max-670 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__product-item {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         padding: 38px 38px;
+        @include max-1100 {
+            background-position: center top;
+        }
+        @include max-860 {
+            background-image: none !important;
+        }
+        @include max-670 {
+            margin-bottom: 20px;
+        }
+        @include max-420 {
+            padding: 38px 20px;
+        }
         &:nth-child(1) {
             grid-row: span 2;
             p {
@@ -62,6 +109,12 @@
                 color: #6600cc;
                 border-bottom: 1px solid #6600cc;
                 padding-bottom: 5px;
+            }
+            @include max-1100 {
+                grid-row: auto;
+            }
+            @include max-860 {
+                background-color: #f4dff0;
             }
         }
         &:nth-child(2) {
@@ -75,6 +128,17 @@
                 border-bottom: 1px solid $accent;
                 padding-bottom: 5px;
             }
+            @include max-1100 {
+                grid-column: auto;
+                background-position: right;
+                padding: 38px 38px;
+            }
+            @include max-860 {
+                background-color: #7efef0;
+            }
+            @include max-420 {
+                padding: 38px 20px;
+            }
         }
         &:nth-child(3) {
             p {
@@ -85,6 +149,9 @@
                 border-bottom: 1px solid #ffcc33;
                 padding-bottom: 5px;
             }
+            @include max-860 {
+                background-color: #fff6a7;
+            }
         }
         &:nth-child(4) {
             p {
@@ -94,6 +161,9 @@
                 color: #33ccff;
                 border-bottom: 1px solid #33ccff;
                 padding-bottom: 5px;
+            }
+            @include max-860 {
+                background-color: #ededed;
             }
         }
     }

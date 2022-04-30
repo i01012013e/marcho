@@ -1,33 +1,58 @@
 .top-slider {
-  background-image: url(../img/bg/slider-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $bg;
-  padding: 65px 0 40px;
-  &__container {
-      max-width: 1520px;
-  }
+    background-image: url(../img/bg/slider-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: $bg;
+    padding: 65px 0 40px;
+    &__container {
+        max-width: 1520px;
+    }
     &__inner {
     }
     &__item {
-        padding-left: 135px;
+        padding-left: 20px;
         display: flex !important;
-        justify-content: space-between;
+        justify-content: center;
+        @include max-1050 {
+            & .top-slider__img {
+                display: none;
+            }
+        }
     }
     &__content {
         padding-left: 20px;
         padding-top: 105px;
+        @include max-1200 {
+            padding-left: 15px;
+            padding-top: 40px;
+        }
+        @include max-1050 {
+            padding: 0 0 50px;
+        }
     }
     &__title {
         @extend %title;
         max-width: 670px;
         font-size: 58px;
         line-height: 68px;
-        margin-bottom: 35px;
+        @include max-670 {
+            font-size: 44px;
+            line-height: 52px;
+            margin-bottom: 25px;
+        }
+        @include max-375 {
+            font-size: 38px;
+            line-height: 48px;
+            margin-bottom: 20px;
+        }
+       
     }
     &__text {
         @extend %text;
         max-width: 470px;
+        @include max-375 {
+        }
     }
     &__link {
         @extend %btn;
@@ -35,14 +60,23 @@
         padding: 16px 0;
         letter-spacing: 5px;
         margin-top: 60px;
-
+        @include max-375 {
+            margin-top: 40px;
+        }
     }
     &__img {
+        @include max-1200 {
+            width: 40%;
+            object-fit: contain;
+        }
     }
     .slick-dots {
         display: flex;
         justify-content: center;
         margin-top: -68px;
+        @include max-1050 {
+            margin-top: 0px;
+        }
         li {
             padding: 0 5px;
             line-height: 0px;
@@ -74,5 +108,8 @@
                 }
             }
         }
+    }
+    @include max-670 {
+        padding: 45px 0 30px;
     }
 }

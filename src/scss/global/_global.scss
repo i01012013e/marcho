@@ -2,35 +2,38 @@
 @import "_font.scss";
 @import "_var.scss";
 @import "_extend.scss";
+@import "_max.scss";
 
 body {
     font-size: 16px;
-    // line-height: 26px;
     color: $title;
     @extend %roboto-400;
 }
+// ! ---------------------
 // .wrapper {
-//     height: 100vh;
 //     display: flex;
 //     flex-direction: column;
-//     justify-content: space-between;
 // }
+// .main {
+//     height: 375px;
+// }
+// ! ---------------------
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
-.title{
+.title {
     @extend %title;
     text-align: center;
 }
-.text{
+.text {
     @extend %text;
     max-width: 571px;
     text-align: center;
     margin: 0 auto;
 }
-.header--page-404{
+.header--page-404 {
     background-color: $bg;
 }
 .pagination {
@@ -38,7 +41,7 @@ body {
     justify-content: center;
     margin-top: 40px;
     &__prev {
-        &:before{
+        &:before {
             content: url(../img/icon/angle-down.svg);
             transform: rotate(90deg);
             display: inline-block;
@@ -58,11 +61,11 @@ body {
     &__link {
         @extend %text;
     }
-    &__link--active{
+    &__link--active {
         color: $accent;
     }
     &__next {
-        &:after{
+        &:after {
             content: url(../img/icon/angle-down.svg);
             transform: rotate(-90deg);
             display: inline-block;
@@ -70,6 +73,3 @@ body {
         }
     }
 }
-
-
-  

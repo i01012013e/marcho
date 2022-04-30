@@ -7,6 +7,9 @@
     padding: 125px 0;
     &__inner {
         display: flex;
+        @include max-1050 {
+            display: block;
+        }
     }
     &__popup {
         max-width: 530px;
@@ -19,10 +22,23 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        @include max-1050 {
+            max-width: 100%;
+            background-position: top;
+        }
+        @include max-670 {
+            height: 270px;
+        }
     }
     &__content {
         max-width: 570px;
         margin-top: 80px;
+        @include max-1050 {
+            max-width: 100%;
+        }
+        @include max-670 {
+            margin-top: 40px;
+        }
     }
     &__subtitle {
         @extend %subtitle;
@@ -32,6 +48,10 @@
     &__title {
         @extend %title;
         margin: 20px 0 35px 0;
+        @include max-375 {
+            font-size: 30px;
+            line-height: 40px;
+        }
     }
     &__text {
         @extend %text;
@@ -44,6 +64,12 @@
         padding: 18px 28px;
         letter-spacing: 3px;
         margin-top: 60px;
+        @include max-375 {
+            margin-top: 30px;
+        }
+    }
+    @include max-670 {
+        padding: 60px 0;
     }
 }
 // @function max($numbers...) {

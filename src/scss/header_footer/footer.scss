@@ -6,17 +6,25 @@
     border-bottom: 1px solid #ececec;
     display: flex;
     justify-content: space-between;
-    &__item {
+    @include max-1050 {
+        flex-wrap: wrap;
+    }
+    @include max-860 {
+        justify-content: flex-start;
     }
     &__item-contact {
         width: 270px;
         margin-right: 30px;
         padding-right: 33px;
+        @include max-860 {
+            width: 100%;
+            margin-bottom: 30px;
+        }
     }
     &__logo {
-        margin-bottom: 35px;
+        margin-bottom: 45px;
     }
-    &__email{
+    &__email {
         margin-top: 5px;
     }
     &__address,
@@ -47,6 +55,9 @@
         width: 170px;
         margin-right: 30px;
         line-height: 24px;
+        @include max-420 {
+            margin-top: 30px;
+        }
     }
     &__title {
         margin-bottom: 47px;
@@ -56,6 +67,10 @@
     &__item-form {
         max-width: 470px;
         line-height: 24px;
+        @include max-1050 {
+            max-width: 100%;
+            margin-top: 30px;
+        }
     }
     &__text {
         font-size: 16px;
@@ -64,17 +79,23 @@
         margin-top: -2px;
         @extend %quicksand-500;
     }
-    &__form {
+    &__form{
+        display: flex;
+        @include max-420 {
+            flex-wrap: wrap;
+        }
     }
     &__form-input {
-        max-width: 330px;
-        width: 100%;
+        width: 330px;
         padding: 16px;
         border: none;
         font-size: 16px;
         color: $text;
         @extend %quicksand-500;
         box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+        @include max-420 {
+            width: 100%;
+        }
     }
     &__form-btn {
         padding: 16px 24px 15px;
@@ -86,22 +107,34 @@
         @extend %roboto-400;
         box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
         cursor: pointer;
+        @include max-420 {
+            margin: 10px 0 0 0;
+            width: 100%;
+        }
     }
 }
 .footer-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 27px 0;
     color: $text;
+    min-height: 75px;
+    @include max-670 {
+        flex-direction: column;
+        justify-content: space-evenly;
+        // margin: 27px 0;
+    }
+    &__copy{
+        @include max-670 {
+            text-align: center;
+        }
+    }
     &__sccept {
         display: flex;
         align-items: center;
     }
     &__accept-img {
-        padding: 0 20px;
+        padding-left: 20px;
         vertical-align: text-top;
     }
 }
-
-

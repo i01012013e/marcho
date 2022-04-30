@@ -3,15 +3,87 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        @include max-1200 {
+            padding-right: 10px;
+        }
+    }
+    &__logo-img {
+        @include max-320 {
+            width: 70%;
+        }
     }
 }
 .menu {
+    @include max-860 {
+        order: 1;
+        margin-left: 50px;
+    }
+    @include max-500 {
+        order: 0;
+    }
+    &__burger-btn {
+        display: none;
+        cursor: pointer;
+        @include max-860 {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            span {
+                width: 100%;
+                height: 3px;
+                background-color: $title;
+            }
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: $title;
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+        }
+    }
     &__list {
         display: flex;
+        align-items: center;
+        @include max-860 {
+            position: absolute;
+            top: 110px;
+            width: 100%;
+            left: 0;
+            padding: 0 15px;
+            display: block;
+            text-align: center;
+            z-index: 5;
+            transform: translateY(-200%);
+            transition: all 0.3s;
+            background-color: #fff;
+            &.menu__list--active {
+                transform: translateY(0%);
+                transition: all 0.3s;
+            }
+        }
+        @include max-500 {
+            top: 160px;
+        }
     }
     &__list-item + &__list-item {
         padding-left: 35px;
+        @include max-860 {
+            padding-left: 0px;
+            padding-top: 20px;
+        }
     }
     &__list-link {
         color: $title;
@@ -23,6 +95,9 @@
             border-bottom: 1px solid $accent;
             font-weight: 700;
         }
+        @include max-860 {
+            padding-bottom: 15px;
+        }
     }
     &__list-link--active {
         color: $accent;
@@ -31,6 +106,17 @@
     }
 }
 .user-nav {
+    @include max-860 {
+        margin-left: auto;
+    }
+    @include max-500 {
+        width: 100%;
+        margin-top: 35px;
+        justify-content: flex-end;
+    }
+    @include max-320 {
+        justify-content: center;
+    }
     display: flex;
     &__link {
         position: relative;
@@ -54,4 +140,3 @@
         line-height: 20px;
     }
 }
-

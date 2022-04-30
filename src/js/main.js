@@ -1,5 +1,17 @@
 $(function () {
     // -------------------------------------------
+    // -------------------------------------------
+    // -------------------------------------------
+    // -------------------------------------------
+    $(".footer-top__title").on("click", function () {
+        $(this).next().slideToggle();
+        $(this).toggleClass('active');
+    });
+    // -------------------------------------------
+    $(".menu__burger-btn").on("click", function () {
+        $(".menu__list").toggleClass("menu__list--active");
+    });
+    // -------------------------------------------
     $(".product-tabs__btn").on("click", function (e) {
         e.preventDefault();
         $(".product-tabs__btn").removeClass("product-tabs__btn--active");
@@ -54,7 +66,7 @@ $(function () {
     $(".top-slider__inner").slick({
         dots: true,
         arrows: false,
-        autoplay: true,
+        autoplay: false,
         autoplaySped: 1000,
     });
 
@@ -121,18 +133,16 @@ $(function () {
 
     var deadline = $(".promo__clock-box").attr("data-time");
     initializeClock(".promo__clock-box", deadline);
-
-    
 });
 
 // ------------------------------------------------------------
 let map;
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 10,
-  });
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 10,
+    });
 }
 
 window.initMap = initMap;

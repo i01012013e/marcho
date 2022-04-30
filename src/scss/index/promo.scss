@@ -6,6 +6,9 @@
         background-size: cover;
         padding: 150px 0 160px;
         text-align: center;
+        @include max-600{
+            padding: 50px 0;
+        }
     }
     &__inner {
         max-width: 570px;
@@ -56,6 +59,9 @@
     max-width: 1200px;
     margin: 113px auto 0px;
     padding: 0 15px;
+    @include max-600{
+        margin: 50px 0;
+    }
     &__item {
     }
 }
