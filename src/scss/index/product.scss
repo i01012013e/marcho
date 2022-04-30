@@ -119,6 +119,7 @@
         max-width: 370px;
         @include max-670 {
             max-height: 300px;
+            max-width: 100%;
         }
     }
     &__images {
